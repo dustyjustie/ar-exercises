@@ -15,10 +15,10 @@ new_name = gets.chomp
 
 badstore = Store.new(name: new_name)
 if badstore.valid?
-  puts 'saving valid store'
+  puts 'Saving Valid Store'
   badstore.save
 else
-  puts 'ERRORS!!!!!'
+  puts 'ERROR, following validations not satisfied: '
   badstore.errors.full_messages.each do |message|
     puts message
   end
